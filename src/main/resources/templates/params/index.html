@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Enviar parametros del request HTTP GET - URL</title>
+</head>
+<body>
+
+	<h1>Enviar parametros del request HTTP GET - URL</h1>
+	<ul>
+		<h3>SELECCIONE EL TEXTO PARA ENVIAR PARAMETROS A LA URL</h3>
+		<li><a th:href="@{/params/mapeoString(texto='Hola Leo')}"> /params/mapeoString?texto= Hola Leo</a></li>
+		<li><a th:href="@{/params/mapeoString(texto='Hola Juan')}"> /params/mapeoString?texto= Hola Juan</a></li><br>
+		<h3>SELECCIONE EL TEXTO Y NUMERO PARA ENVIAR PARAMETROS A LA URL</h3>
+		<li><a th:href="@{/params/mapeoMix(saludo = 'Buenos Dias' , numero = '7')}"> /params/mapeoMix?saludo=Buenos Dias&numero = 7</a></li>
+		<li><a th:href="@{/params/mapeoMix(saludo = 'Buenas tardes' , numero = '13')}"> /params/mapeoMix?saludo=Buenas tardes&numero = 13</a></li>
+		<li><a th:href="@{/params/mapeoMix(saludo = 'Buenas noches' , numero = '20')}"> /params/mapeoMix?saludo=Buenas noches&numero = 20</a></li>
+		<li><a th:href="@{/params/mapeoMixRequest(saludo = 'Buenas Mañanas' , numero = '3')}"> /params/mapeoMixRequest?saludo=Buenas Mañanas&numero = 3</a></li>
+	</ul>
+
+</body>
+</html>
